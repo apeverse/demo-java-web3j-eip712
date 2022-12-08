@@ -1,0 +1,88 @@
+{
+  "types": {
+    "EIP712Domain": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "version",
+        "type": "string"
+      },
+      {
+        "name": "chainId",
+        "type": "uint256"
+      },
+      {
+        "name": "verifyingContract",
+        "type": "address"
+      }
+    ],
+    "FixedPriceOrder": [
+      {
+        "name": "taker",
+        "type": "address"
+      },
+      {
+        "name": "maker",
+        "type": "address"
+      },
+      {
+        "name": "maker_nonce",
+        "type": "uint256"
+      },
+      {
+        "name": "listing_time",
+        "type": "uint64"
+      },
+      {
+        "name": "expiration_time",
+        "type": "uint64"
+      },
+      {
+        "name": "nft_contract",
+        "type": "address"
+      },
+      {
+        "name": "token_id",
+        "type": "uint256"
+      },
+      {
+        "name": "payment_token",
+        "type": "address"
+      },
+      {
+        "name": "fixed_price",
+        "type": "uint256"
+      },
+      {
+        "name": "royalty_rate",
+        "type": "uint256"
+      },
+      {
+        "name": "royalty_recipient",
+        "type": "address"
+      }
+    ]
+  },
+  "domain": {
+    "name": "EIP712 DApp",
+    "version": "1",
+    "chainId": 80001,
+    "verifyingContract": "0x38c789917DFCdc1d838126803109715cD8951608"
+  },
+  "primaryType": "FixedPriceOrder",
+  "message": {
+    "taker": "0x0F2Bf2297488BB354977Ef02b2d7e7F7bC48dd1f",
+    "maker": "0x12eEe4aEE6a08aE21663D7BF23b0BCecdE30C5D4",
+    "maker_nonce": 0,
+    "listing_time": 300,
+    "expiration_time": 2649398937,
+    "nft_contract": "0xC56dc264AcdAA913F4af825F48Ed3F6DCa699700",
+    "token_id": 123,
+    "payment_token": "0xC56dc264AcdAA913F4af825F48Ed3F6DCa699700",
+    "fixed_price": 10000,
+    "royalty_rate": 5,
+    "royalty_recipient": "0x12eEe4aEE6a08aE21663D7BF23b0BCecdE30C5D4"
+  }
+}
