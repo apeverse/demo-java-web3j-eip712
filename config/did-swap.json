@@ -1,0 +1,76 @@
+{
+  "types": {
+    "EIP712Domain": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "version",
+        "type": "string"
+      },
+      {
+        "name": "chainId",
+        "type": "uint256"
+      },
+      {
+        "name": "verifyingContract",
+        "type": "address"
+      }
+    ],
+    "FixedPriceOrder": [
+      {
+        "name": "maker",
+        "type": "address"
+      },
+      {
+        "name": "taker",
+        "type": "address"
+      },
+      {
+        "name": "startTime",
+        "type": "uint64"
+      },
+      {
+        "name": "endTime",
+        "type": "uint64"
+      },
+      {
+        "name": "makerNonce",
+        "type": "uint64"
+      },
+
+      {
+        "name": "tokenId",
+        "type": "uint256"
+      },
+
+      {
+        "name": "ethPrice",
+        "type": "uint256"
+      },
+      {
+        "name": "sell",
+        "type": "bool"
+      }
+    ]
+  },
+  "domain": {
+    "name": "DID NFT DEX",
+    "version": "Version 0.1.0",
+    "chainId": 5,
+    "verifyingContract": "0x0000000000000000000000000000000000000000"
+  },
+  "primaryType": "FixedPriceOrder",
+  "message": {
+    "maker": "0xF07149221A4C85c26feCC560c5970Ec1415f6735",
+    "taker": "0xe26f015ba6b8c400cE327CeEBE34B717e6897e69",
+    "startTime": 1670412507,
+    "endTime": 1670498907,
+    "makerNonce": 21,
+
+    "tokenId": 65069318939304788313818122333459410691068190247118834352141108937963451524583,
+    "ethPrice": 1000000000000000000,
+    "sell": true
+  }
+}
