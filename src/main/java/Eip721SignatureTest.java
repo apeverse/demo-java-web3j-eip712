@@ -24,19 +24,20 @@ public class Eip721SignatureTest {
         ObjectMapper objectMapper = new ObjectMapper();
         HashMap data = objectMapper.readValue(IoUtil.readUtf8(new FileInputStream("config/did-swap.json")), HashMap.class);
         StructuredDataEncoder dataEncoder = new StructuredDataEncoder(objectMapper.writeValueAsString(data));
-        byte[] bytes = dataEncoder.hashStructuredData();
+        byte[] hash_bytes = dataEncoder.hashStructuredData();
 
-        String encode = Numeric.toHexString(bytes);
+        String hash_hex_str = Numeric.toHexString(hash_bytes);
         String signature = "bc21f59c4bd1fd6c4bd72bf818e2433b08f4d27adec5eff6e4bd8a7191c220456c62c37b55a38dd678194ab5b2240e686f4477066ec3d502098ffd87323d44de1b";
         // 正常情况下 这里的maker会与 config/did-swap.json 中的maker是一样的
         String marker = "0xef678007D18427E6022059Dbc264f27507CD1ffC";
         boolean b = false;
         try {
-            b =verifySign(encode, marker, signature);
+            b =verifySign(hash_hex_str, marker, signature);
         } catch (Exception e) {
             e.printStackTrace();
         }
         Assert.isTrue(b);
+        System.out.println("Hex String Hash: " + hash_hex_str);
     }
 
     /**
